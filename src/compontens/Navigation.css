@@ -1,0 +1,103 @@
+/*########## Navigation ###########*/
+.navigation{
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    font-family: Garamond;
+}
+.nav-stroke{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+  
+}
+
+.nav ul{
+    list-style: none;
+    margin-top: 7%;
+    margin-left: 15.5%;
+    display: flex;
+  
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    margin: 20px;
+    margin-right: 35px;
+    text-decoration: none;
+    color: #483928;
+    font-weight: 200;
+    font-size: 23px;
+    text-transform: lowercase;
+    
+    
+}
+
+nav ul li a,
+nav ul li a::after,
+nav ul li a::before{
+    transition: all .5s;
+}
+
+nav ul li a:hover{
+    color:#483928;
+
+}
+
+nav.stroke ul li a,
+nav.fill ul li a{
+    position: relative;
+
+}
+
+nav.stroke ul li a::after,
+nav.fill ul li a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #483928;
+    height: 1px;
+    
+}
+
+nav.stroke ul li a:hover::after{
+    width: 100%;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after{
+    text-align: left;
+    content: "";
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover{
+    color: #483928;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after{
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}

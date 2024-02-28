@@ -1,0 +1,48 @@
+.welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease; /* Add a transition for the transform property */
+  }
+  
+  .slide-up {
+    transform: translateY(-100%); /* Slide the section up */
+  }
+  
+  .content-name {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+  }
+  
+  .content-name h1 {
+    color: hsl(0, 0%, 28%);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+  }
+  
+  .content-name h1 span {
+    transition: 0.5s ease-out;
+  }
+  
+  .content-name h1:hover span:nth-child(1) {
+    margin-right: 5px;
+  }
+  
+  .content-name h1:hover span:nth-child(1):after {
+    content: "'";
+  }
+  
+  .content-name h1:hover span:nth-child(2) {
+    margin-left: 30px;
+  }
+  
+  .content-name h1:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  }
+  
