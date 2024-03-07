@@ -3,12 +3,8 @@ import { Button } from "react-scroll";
 import Spline from '@splinetool/react-spline';
 import website from "../img/SplineWeb.png";
 
-
 //CSS file
 import "../sections/sectionProject.css";
-
-
-import app from "../img/laptop-table.jpg";
 
 const ProjectSection = () => {
 
@@ -74,8 +70,6 @@ const ProjectSection = () => {
         </section>
         
     )
-        
-    
 }
 
 export default ProjectSection;
